@@ -30,7 +30,7 @@ public class Pentagon extends Shape implements PerimeterCalculable, AreaCalculab
      * setting and getting methods for number of sides
      */
     public void setNumberOfSides(int numberOfSides) {
-        this.numberOfSides = 4;
+        this.numberOfSides = 5;
     }
 
     public int getNumberOfSides() {
@@ -52,7 +52,7 @@ public class Pentagon extends Shape implements PerimeterCalculable, AreaCalculab
      */
     public double calculateArea() {
         double radians = Math.toRadians(180 / numberOfSides); // converts degrees to radians
-        area = (numberOfSides * sideLength * sideLength) / (4 * Math.sin(radians)); // general formula that works with
+        area = (numberOfSides * sideLength * sideLength) / (4 * Math.tan(radians)); // general formula that works with
                                                                                     // any regular polygon
         return area;
 

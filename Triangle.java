@@ -12,7 +12,7 @@ public class Triangle extends Shape implements PerimeterCalculable, AreaCalculab
      */
     public Triangle(double sideLength) {
         this.sideLength = sideLength;
-        this.numberOfSides = 4;
+        this.numberOfSides = 3;
     }
 
     /**
@@ -52,7 +52,7 @@ public class Triangle extends Shape implements PerimeterCalculable, AreaCalculab
      */
     public double calculateArea() {
         double radians = Math.toRadians(180 / numberOfSides); // converts degrees to radians
-        area = (numberOfSides * sideLength * sideLength) / (4 * Math.sin(radians)); // general formula that works with
+        area = (numberOfSides * sideLength * sideLength) / (4 * Math.tan(radians)); // general formula that works with
                                                                                     // any regular polygon
         return area;
 

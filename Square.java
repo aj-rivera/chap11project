@@ -49,7 +49,7 @@ public class Square extends Shape implements PerimeterCalculable, AreaCalculable
      */
     public double calculateArea() {
         double radians = Math.toRadians(180 / numberOfSides); // converts degrees to radians
-        area = (numberOfSides * sideLength * sideLength) / (4 * Math.sin(radians)); // general formula that works with
+        area = (numberOfSides * sideLength * sideLength) / (4 * Math.tan(radians)); // general formula that works with
                                                                                     // any regular polygon
         return area;
 
