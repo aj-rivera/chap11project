@@ -1,19 +1,18 @@
-public class Square extends Shape implements PerimeterCalculable, AreaCalculable {
+public class Pentagon extends Shape implements PerimeterCalculable, AreaCalculable {
 
     /**
      * This is the default constructor for class
      */
-    public Square() {
-        this.numberOfSides = 4;
+    public Pentagon() {
     }
 
     /**
-     * This is a constructor for a square with a sidelength.
+     * This is a constructor for a pentagon with a sidelength.
      * It also sets the number of sides.
      */
-    public Square(double sideLength) {
+    public Pentagon(double sideLength) {
         this.sideLength = sideLength;
-        this.numberOfSides = 4;
+        this.numberOfSides = 5;
     }
 
     /**
@@ -30,6 +29,10 @@ public class Square extends Shape implements PerimeterCalculable, AreaCalculable
     /**
      * setting and getting methods for number of sides
      */
+    public void setNumberOfSides(int numberOfSides) {
+        this.numberOfSides = 4;
+    }
+
     public int getNumberOfSides() {
         return numberOfSides;
     }

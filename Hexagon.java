@@ -1,19 +1,18 @@
-public class Square extends Shape implements PerimeterCalculable, AreaCalculable {
+public class Hexagon extends Shape implements PerimeterCalculable, AreaCalculable {
 
     /**
      * This is the default constructor for class
      */
-    public Square() {
-        this.numberOfSides = 4;
+    public Hexagon() {
     }
 
     /**
-     * This is a constructor for a square with a sidelength.
+     * This is a constructor for a hexagon with a sidelength.
      * It also sets the number of sides.
      */
-    public Square(double sideLength) {
+    public Hexagon(double sideLength) {
         this.sideLength = sideLength;
-        this.numberOfSides = 4;
+        this.numberOfSides = 6;
     }
 
     /**
@@ -30,6 +29,10 @@ public class Square extends Shape implements PerimeterCalculable, AreaCalculable
     /**
      * setting and getting methods for number of sides
      */
+    public void setNumberOfSides(int numberOfSides) {
+        this.numberOfSides = 4;
+    }
+
     public int getNumberOfSides() {
         return numberOfSides;
     }
@@ -44,7 +47,7 @@ public class Square extends Shape implements PerimeterCalculable, AreaCalculable
 
     /**
      * This method calculates area using a generic formula
-     * that should work with any equilateral shape with a sidelength
+     * that should work with any regular polygon with a sidelength
      * and number of sides.
      */
     public double calculateArea() {
